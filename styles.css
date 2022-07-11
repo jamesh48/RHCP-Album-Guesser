@@ -1,0 +1,86 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+.answer-pool-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.answer-pool {
+  text-align: center;
+  color: white;
+  max-width: 75%;
+
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-container {
+  color: white;
+}
+.answer-candidate {
+  background: #555555;
+  color: white;
+  justify-content: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  padding: 0.4rem;
+}
+
+.answer-form-container {
+  width: 25rem;
+  height: 35rem;
+  overflow-y: scroll;
+  /* background-color: #555555; */
+}
+
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.answer-box {
+  background-color: white;
+  color: black;
+  height: 3rem;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+p,
+h4,
+h5,
+h3,
+h2,
+h1 {
+  color: white;
+}
+
+button {
+  width: 50%;
+  flex: 1;
+  font-size: 18rem;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  text-align: center;
+  background-color: #555555;
+  border-width: 0.5rem;
+}
