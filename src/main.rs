@@ -20,6 +20,29 @@ struct Album {
 fn app() -> Html {
     let albums = vec![
         Album {
+            title: "Blood Sex Sugar Magik".to_string(),
+            songs: [
+                "The Power of Equality".to_string(),
+                "If you have to Ask".to_string(),
+                "Breaking the Girl".to_string(),
+                "Funky Monks".to_string(),
+                "Suck my Kiss".to_string(),
+                "I could have Lied".to_string(),
+                "Mellowship slinky in B Major".to_string(),
+                "The Righteous & the Wicked".to_string(),
+                "Give it away".to_string(),
+                "Blood sex sugar magik".to_string(),
+                "Under the Bridge".to_string(),
+                "Naked in the Rain".to_string(),
+                "Apache Rose Peacock".to_string(),
+                "The Greeting Song".to_string(),
+                "My Lovely Man".to_string(),
+                "Sir Psycho Sexy".to_string(),
+                "They're Red Hot".to_string(),
+            ]
+            .to_vec(),
+        },
+        Album {
             title: "Californication".to_string(),
             songs: [
                 "Around the World".to_string(),
@@ -129,7 +152,12 @@ fn app() -> Html {
         })
         .collect::<Html>();
 
-    let songs_only = [albums[0].songs.clone(), albums[1].songs.clone()].concat();
+    let songs_only = [
+        albums[0].songs.clone(),
+        albums[1].songs.clone(),
+        albums[2].songs.clone(),
+    ]
+    .concat();
 
     let curr_answer_pool = songs_only.to_vec().iter().map(|song| {
         html! {
@@ -141,7 +169,9 @@ fn app() -> Html {
         <div class="parent-container">
         <h4>{"RHCP Album Guesser"}</h4>
         <div class="main">
-            {html_albums}
+            <div class="albums-container">
+                {html_albums}
+            </div>
             <div class="answer-pool-container">
                 {curr_answer_pool}
             </div>
