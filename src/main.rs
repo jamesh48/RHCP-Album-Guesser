@@ -55,7 +55,7 @@ fn app() -> Html {
                 "Throw away your television".to_string(),
                 "Cabron".to_string(),
                 "Tear".to_string(),
-                "On Mencury".to_string(),
+                "On Mercury".to_string(),
                 "Minor Thing".to_string(),
                 "Warm Tape".to_string(),
                 "Venice Queen".to_string(),
@@ -130,6 +130,7 @@ fn app() -> Html {
         .collect::<Html>();
 
     let songs_only = [albums[0].songs.clone(), albums[1].songs.clone()].concat();
+
     let curr_answer_pool = songs_only.to_vec().iter().map(|song| {
         html! {
             <div draggable="true" class="answer-candidate" ondragstart={ondragstart.clone()} name={song.to_string()}>{song}</div>
